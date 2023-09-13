@@ -1,0 +1,7 @@
+Docker CMD to test:
+docker run --rm --env PING_URLS=https://google.com rjhoppe/go-ping-service-for-kub-docker
+
+Kubernetes CMD to test:
+kubectl apply -f ./go-ping-service.yaml
+kubectl get pods
+kubectl logs -f go-ping-service-{your-container-id}

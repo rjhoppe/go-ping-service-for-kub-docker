@@ -1,0 +1,5 @@
+- Provide list of urls
+- Loop through urls, report status
+- Run inside Kubernetes (Docker container, k8s deployment file)
+- Dockerfile to run and test the service
+- YAML file to deploy to Kubernetes

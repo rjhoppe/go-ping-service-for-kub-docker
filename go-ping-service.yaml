@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-ping-service
+  labels:
+    app: go-ping-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: go-ping-service
+  template:
+    metadata:
+      labels:
+        app: go-ping-service
+    spec:
+      containers:
+        - name: app
+          image: rjhoppe/go-ping-service-for-kub-docker
+        env:
+          - name: PING_URLS
+            value: https://google.com
+
